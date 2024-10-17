@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="logo">Weather App</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="dashboard-link">Dashboard</a></li>
+                <li><a href="#" id="tables-link">Tables</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <!-- Weather widget where current weather is displayed -->
+        <div class="weather-data" id="weather-widget"></div>
+
+        <!-- Buttons to toggle between different charts -->
+        <!-- <div class="chart-buttons"> 
+            <button id="bar-chart-btn">Bar Chart</button>
+            <button id="doughnut-chart-btn">Doughnut Chart</button>
+            <button id="line-chart-btn">Line Chart</button>
+        </div> -->
+
+        <!-- Charts section -->
+        <div class="charts">
+            <canvas id="bar-chart" class="chart"></canvas>
+            <canvas id="doughnut-chart" class="chart"></canvas>
+            <canvas id="line-chart" class="chart"></canvas>
+        </div>
+
+        <!-- Additional buttons for filtering data -->
+        <div class="extra-buttons">
+            <button id="ascending-temp-btn">Show Temperatures in Ascending Order</button>
+            <button id="descending-temp-btn">Show Temperatures in Descending Order</button>
+            <button id="filter-rain-btn">Filter Days with Rain</button>
+            <button id="highest-temp-btn">Show Day with Highest Temperature</button>
+        </div>
+
+        <!-- Section for displaying the filtered data -->
+        <div class="filtered-results">
+            <h3>Filtered Data</h3>
+            <div id="filtered-results-table"></div>
+        </div>
+    </div>
+
+    <!-- Link to Chart.js and JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
